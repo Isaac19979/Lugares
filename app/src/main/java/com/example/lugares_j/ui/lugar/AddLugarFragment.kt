@@ -42,7 +42,7 @@ class AddLugarFragment : Fragment() {
             val correo = binding.etCorreo.text.toString() //Obtiene el texto de lo que el usuario escribío
             val telefono = binding.etTelefono.text.toString() //Obtiene el texto de lo que el usuario escribío
             val web = binding.etWeb.text.toString() //Obtiene el texto de lo que el usuario escribío
-            val lugar = Lugar(0,nombre,correo,telefono,web,0.0,0.0,0.0,"","")
+            val lugar = Lugar("",nombre,correo,telefono,web,0.0,0.0,0.0,"","")
 
             //Se procede a registrar el nuevo lugar
             lugarViewModel.saveLugar(lugar)
