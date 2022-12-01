@@ -3,6 +3,9 @@ package com.example.lugares_j
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -12,6 +15,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.lugares_j.databinding.ActivityPrincipalBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -42,6 +46,24 @@ class Principal : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        actualiza(navView)
+    }
+
+    private fun actualiza(navView: NavigationView) {
+        val vista: View = navView.getHeaderView(0) //Va a obtener el espacio en nav_header_principal.xml
+        val nombre: TextView = vista.findViewById(R.id.nombre_usuario)
+        val correo: TextView = vista.findViewById(R.id.correo_usuario)
+        val foto: ImageView = vista.findViewById(R.id.foto_usuario)
+        val usuario = Firebase.auth.currentUser
+        nombre.text = usuario?.displayName
+        correo.text = usuario?.email
+        var fotoUrl = usuario?.photoUrl.toString()
+        if(fotoUrl.isNotEmpty()){ //hace que la imagen se muestre en la pantalla
+            Glide.with(this)
+                .load(fotoUrl)
+                .circleCrop()
+                .into(foto)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

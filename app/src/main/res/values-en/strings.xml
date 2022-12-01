@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lugares_J</string>
-    <string name="tv_correo">Correo</string>
-    <string name="tv_clave">Contraseña</string>
+    <string name="app_name">Places</string>
+    <string name="tv_correo">Email</string>
+    <string name="tv_clave">Password</string>
     <string name="title_activity_principal">Principal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -14,15 +15,15 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
-    <string name="msg_nombre">Nombre del lugar</string>
+    <string name="msg_nombre">Name</string>
     <string name="msg_correo">Email (lugar@xxxx.xxxx)</string>
     <string name="msg_telefono">Teléfono (9999–9999)</string>
-    <string name="msg_web">Sito Web</string>
-    <string name="bt_add_lugar">Agregar</string>
-    <string name="msg_lugar_added">Lugar agregado</string>
-    <string name="msg_data">Faltan datos</string>
-    <string name="bt_update_lugar">Actualizar Lugar</string>
-    <string name="msg_lugar_updated">Lugar actualizado</string>
+    <string name="msg_web">Web Site</string>
+    <string name="bt_add_lugar">Add Place</string>
+    <string name="msg_lugar_added">Place Added</string>
+    <string name="msg_data">Missing data</string>
+    <string name="bt_update_lugar">Update Place</string>
+    <string name="msg_lugar_updated">Place Updated</string>
     <string name="bt_delete_lugar">Eliminar Lugar</string>
     <string name="msg_lugar_deleted">Lugar eliminado</string>
     <string name="msg_pregunta_delete">¿Esta seguro de eliminar el lugar </string>
@@ -58,8 +59,4 @@
     <string name="msg_subiendo_imagen">Subiendo imagen</string>
     <string name="todo">luego</string>
     <string name="msg_subiendo_lugar">Subiendo el lugar</string>
-    <string name="default_web_client_idr"
-        translatable="false">865809111957-4vomdq5i77ml0qrpmv6oc8o3k77k10s3.apps.googleusercontent.com</string>
-
-
 </resources>
